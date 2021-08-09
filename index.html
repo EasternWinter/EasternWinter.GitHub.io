@@ -5,7 +5,7 @@
 <style>
 
 #grad1 {
-  height: 1000px;
+  height: 100%^;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(red, yellow);
 }
@@ -31,9 +31,9 @@
 		//function that evaluates the digit and return result
 		function solve()
 		{
-			let x = document.getElementById("result").value
-			let y = eval(x)
-			document.getElementById("result").value = y
+			let y = document.getElementById("result").value
+			let x = eval(y)
+			document.getElementById("result").value = x
 		}
 		
 		//function that clear the display
