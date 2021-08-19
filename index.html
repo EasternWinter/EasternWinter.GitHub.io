@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
 <style>
+<head>
+	<script>
+		//function that display value
+		function dis(val)
+		{
+			document.getElementById("result").value+=val
+		}
+		
+		//function that evaluates the digit and return result
+		function solve()
+		{
+			let x = document.getElementById("result").value
+			let y = eval(x)
+			document.getElementById("result").value = y
+		}
+		
+		//function that clear the display
+		function clr()
+		{
+			document.getElementById("result").value = ""
+		}
+	</script>
+	<!-- for styling -->
+	<style>
 		.title{
 		margin-bottom: 10px;
-		text-align:center;s
+		text-align:center;
 		width: 210px;
-		color:black;
+		color:white;
 		border: solid black 2px;
 		}
 
 		input[type="button"]
 		{
-		background-color:red;
-		color: white;
+		background-color:white;
+		color: black;
 		border: solid black 2px;
 		width:100%
 		}
@@ -23,34 +47,20 @@
 		border: solid black 2px;
 		width:100%
 		}
-</style>
-<head>
-	<script>
-		function dis(val)
-		{
-			document.getElementById("result").value+=val
-		}
-		{
-			let x = document.getElementById("result").value
-			let y = eval(x)
-			document.getElementById("result").value = y
-		}
-		function clr()
-		{
-			document.getElementById("result").value = ""
-		}
-	</script>
+	</style>
 </head>
+<!-- create table -->
 <body>
-</style>
-
 	<div class = title >Free Calculator</div>
 	<table border="1">
 		<tr>
 			<td colspan="3"><input type="text" id="result"/></td>
+			<!-- clr() function will call clr to clear all value -->
 			<td><input type="button" value="c" onclick="clr()"/> </td>
 		</tr>
 		<tr>
+			<!-- create button and assign value to each button -->
+			<!-- dis("1") will call function dis to display value -->
 			<td><input type="button" value="1" onclick="dis('1')"/> </td>
 			<td><input type="button" value="2" onclick="dis('2')"/> </td>
 			<td><input type="button" value="3" onclick="dis('3')"/> </td>
@@ -76,8 +86,9 @@
 			<td><input type="button" value="*" onclick="dis('*')"/> </td>
 		</tr>
 	</table>
-
 </body>
+</html>
+
 
 <p style="color:black; font-size:100px">Fire And Ice Mod</p>
 
